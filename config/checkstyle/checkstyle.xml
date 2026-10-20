@@ -1,0 +1,81 @@
+<?xml version="1.0"?>
+<!DOCTYPE module PUBLIC
+    "-//Checkstyle//DTD Checkstyle Configuration 1.3//EN"
+    "https://checkstyle.org/dtds/configuration_1_3.dtd">
+
+<module name="Checker">
+    <property name="charset" value="UTF-8"/>
+    <property name="severity" value="error"/>
+    <property name="fileExtensions" value="java, kt"/>
+
+    <!-- File Length Checks -->
+    <module name="FileLength">
+        <property name="max" value="500"/>
+    </module>
+
+    <!-- Tab Character Check -->
+    <module name="FileTabCharacter">
+        <property name="eachLine" value="true"/>
+    </module>
+
+    <module name="TreeWalker">
+
+        <!-- Naming Conventions (CamelCase Rules) -->
+        <module name="TypeName">
+            <property name="format" value="^[A-Z][a-zA-Z0-9]*$"/>
+            <message key="name.invalidPattern" value="Type name ''{0}'' must follow PascalCase/UpperCamelCase naming."/>
+        </module>
+
+        <module name="MethodName">
+            <property name="format" value="^[a-z][a-zA-Z0-9]*$"/>
+            <message key="name.invalidPattern" value="Method name ''{0}'' must follow lowerCamelCase naming."/>
+        </module>
+
+        <module name="MemberName">
+            <property name="format" value="^[a-z][a-zA-Z0-9]*$"/>
+            <message key="name.invalidPattern" value="Field name ''{0}'' must follow lowerCamelCase naming."/>
+        </module>
+
+        <module name="LocalVariableName">
+            <property name="format" value="^[a-z][a-zA-Z0-9]*$"/>
+            <message key="name.invalidPattern" value="Local variable ''{0}'' must follow lowerCamelCase naming."/>
+        </module>
+
+        <module name="ParameterName">
+            <property name="format" value="^[a-z][a-zA-Z0-9]*$"/>
+            <message key="name.invalidPattern" value="Parameter name ''{0}'' must follow lowerCamelCase naming."/>
+        </module>
+
+        <!-- Ban Magic Numbers -->
+        <module name="MagicNumber">
+            <property name="ignoreNumbers" value="-1, 0, 1, 2"/>
+            <property name="ignoreHashCodeMethod" value="true"/>
+            <property name="ignoreAnnotation" value="true"/>
+            <message key="magic.number" value="Magic number ''{0}'' is forbidden. Declare it as a named constant instead."/>
+        </module>
+
+        <!-- Javadoc Rules -->
+        <module name="JavadocMethod">
+            <property name="accessModifiers" value="public"/>
+            <property name="allowMissingParamTags" value="false"/>
+            <property name="allowMissingReturnTag" value="false"/>
+        </module>
+
+        <module name="JavadocType">
+            <property name="scope" value="public"/>
+        </module>
+
+        <!-- Line Length -->
+        <module name="LineLength">
+            <property name="max" value="120"/>
+            <property name="ignorePattern" value="^package.*|^import.*"/>
+        </module>
+
+        <!-- Whitespace & Formatting -->
+        <module name="NeedBraces"/>
+        <module name="LeftCurly"/>
+        <module name="RightCurly"/>
+        <module name="WhitespaceAround"/>
+
+    </module>
+</module>
