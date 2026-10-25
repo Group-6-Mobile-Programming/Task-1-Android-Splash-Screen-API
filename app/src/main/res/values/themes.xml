@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Main app theme (dark) -->
+    <style name="Theme.UNEB" parent="Theme.Material3.Dark.NoActionBar">
+        <item name="colorPrimary">@color/uneb_yellow</item>
+        <item name="colorOnPrimary">@color/uneb_text_on_yellow</item>
+        <item name="android:windowBackground">@color/uneb_bg</item>
+        <item name="android:statusBarColor">@color/uneb_bg</item>
+        <item name="android:navigationBarColor">@color/uneb_bg</item>
+        <item name="android:windowActivityTransitions">true</item>
+    </style>
+
+    <!-- Shown by the system before the splash layout appears (design screen 1) -->
+    <style name="Theme.UNEB.Splash" parent="Theme.SplashScreen">
+        <item name="windowSplashScreenBackground">@color/uneb_bg</item>
+        <item name="windowSplashScreenAnimatedIcon">@drawable/ic_splash_icon</item>
+        <item name="postSplashScreenTheme">@style/Theme.UNEB</item>
+    </style>
+
+    <!-- Checklist text states -->
+    <style name="UNEB.Step" parent="">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/uneb_text_secondary</item>
+    </style>
+    <style name="UNEB.Step.Active">
+        <item name="android:textColor">@color/uneb_white</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+</resources>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="uneb_bg">#0B0F16</color>
+    <color name="uneb_surface">#161C26</color>
+    <color name="uneb_stroke">#252C38</color>
+    <color name="uneb_ring">#2A3140</color>
+    <color name="uneb_yellow">#FFDD00</color>
+    <color name="uneb_red">#D90000</color>
+    <color name="uneb_black">#000000</color>
+    <color name="uneb_white">#FFFFFF</color>
+    <color name="uneb_text_secondary">#A3AAB8</color>
+    <color name="uneb_text_on_yellow">#10141A</color>
+</resources>
