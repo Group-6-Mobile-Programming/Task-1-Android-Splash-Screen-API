@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Placeholder logo. Replace with the official UNEB logo when the designer provides it. -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="160dp" android:height="160dp"
+    android:viewportWidth="160" android:viewportHeight="160">
+    <path android:fillColor="#161C26" android:strokeColor="#FFDD00" android:strokeWidth="10"
+        android:pathData="M80,80m-72,0a72,72 0 1,0 144,0a72,72 0 1,0 -144,0"/>
+    <path android:fillColor="#00000000" android:strokeColor="#FFFFFF" android:strokeWidth="7"
+        android:strokeLineCap="round" android:strokeLineJoin="round"
+        android:pathData="M35,62 V86 a9.5,9.5 0 0 0 19,0 V62 M59,98 V62 L78,98 V62 M100,62 H83 V98 H100 M83,80 H98 M105,62 H114 a7,7 0 0 1 0,14 H105 M105,76 H116 a11,11 0 0 1 0,22 H105 V62"/>
+</vector>
