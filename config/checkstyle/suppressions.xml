@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suppressions PUBLIC
+    "-//Checkstyle//DTD SuppressionFilter Configuration 1.2//EN"
+    "https://checkstyle.org/dtds/suppressions_1_2.dtd">
+
+<!-- Generated Android code is not written by hand, so style rules do not apply -->
+<suppressions>
+    <suppress files="[\\/]build[\\/]" checks=".*"/>
+    <suppress files="R\.java" checks=".*"/>
+    <suppress files="BuildConfig\.java" checks=".*"/>
+    <suppress files="Manifest\.java" checks=".*"/>
+    <!-- Tests do not need Javadoc or magic-number rules -->
+    <suppress files="[\\/]src[\\/](test|androidTest)[\\/]"
+        checks="MissingJavadocMethod|MissingJavadocType|MagicNumber"/>
+</suppressions>
