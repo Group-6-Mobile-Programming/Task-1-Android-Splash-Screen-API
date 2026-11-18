@@ -1,5 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!-- Indeterminate spinner for the active checklist step (28dp ProgressBar).
+     Grey track ring + yellow arc; the whole drawable spins (the ring is
+     symmetrical, so only the arc appears to move).
+     animated-rotate is Animatable, so ProgressBar starts/stops it automatically. -->
 <animated-rotate xmlns:android="http://schemas.android.com/apk/res/android"
-    android:drawable="@drawable/progress_spinner_ring"
     android:pivotX="50%"
-    android:pivotY="50%" />
+    android:pivotY="50%"
+    android:framesCount="48"
+    android:duration="20">
+    <layer-list>
+        <!-- Track: outer radius = half the bounds, 2.5dp-thick at 28dp -->
+        <item>
+            <shape android:shape="ring"
+                android:innerRadiusRatio="2.435"
+                android:thicknessRatio="11.2"
+                android:useLevel="false">
+                <solid android:color="@color/uneb_ring"/>
+            </shape>
+        </item>
+        <!-- Spinning yellow arc -->
+        <item android:drawable="@drawable/spinner_arc"/>
+    </layer-list>
+</animated-rotate>

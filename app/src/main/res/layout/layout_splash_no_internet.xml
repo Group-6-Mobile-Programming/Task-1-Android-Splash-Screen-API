@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Screen 4: no-internet card. Included in activity_splash.xml (statusContainer).
+     Starts gone; show it instead of the checklist when offline. -->
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cardNoInternet"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="22dp"
+    android:layout_marginEnd="22dp"
+    android:background="@drawable/bg_card"
+    android:orientation="vertical"
+    android:padding="20dp"
+    android:layout_gravity="center"
+    android:visibility="gone"
+    tools:visibility="visible">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+        <ImageView
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:importantForAccessibility="no"
+            android:src="@drawable/ic_wifi_off"/>
+        <TextView
+            android:id="@+id/tvNoInternetTitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="14dp"
+            android:layout_weight="1"
+            android:text="@string/no_internet_title"
+            android:textColor="@color/uneb_white"
+            android:textSize="18sp"
+            android:textStyle="bold"/>
+    </LinearLayout>
+    <TextView
+        android:id="@+id/tvNoInternetMessage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:lineSpacingMultiplier="1.15"
+        android:text="@string/no_internet_message"
+        android:textColor="@color/uneb_text_secondary"
+        android:textSize="15sp"/>
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnTryAgain"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:layout_marginTop="18dp"
+        android:text="@string/btn_try_again"
+        android:textAllCaps="false"
+        android:textColor="@color/uneb_text_on_yellow"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:backgroundTint="@color/uneb_yellow"
+        app:cornerRadius="14dp"/>
+</LinearLayout>

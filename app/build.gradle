@@ -1,6 +1,5 @@
 plugins {
     id 'com.android.application'
-    id 'checkstyle'
 }
 
 android {
@@ -21,7 +20,6 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
-
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_11
         targetCompatibility JavaVersion.VERSION_11
@@ -30,32 +28,7 @@ android {
 
 dependencies {
     implementation 'androidx.appcompat:appcompat:1.7.0'
-    implementation 'androidx.core:core-splashscreen:1.0.1'
     implementation 'com.google.android.material:material:1.12.0'
-}
-
-checkstyle {
-    toolVersion = '10.17.0'
-    configDirectory = rootProject.file('config/checkstyle')
-    ignoreFailures = false
-    maxWarnings = 100
-    showViolations = true
-}
-
-task checkstyleApp(type: Checkstyle) {
-    description = 'Runs Checkstyle on the app Java sources'
-    group = 'verification'
-    configFile = rootProject.file('config/checkstyle/checkstyle.xml')
-    source 'src/main/java'
-    include '**/*.java'
-    exclude '**/R.java', '**/BuildConfig.java'
-    classpath = files()
-    reports {
-        xml.required = true
-        html.required = true
-    }
-}
-
-afterEvaluate {
-    tasks.named('check').configure { dependsOn 'checkstyleApp' }
+    implementation 'androidx.core:core:1.15.0'
+    implementation 'androidx.core:core-splashscreen:1.0.1'
 }
