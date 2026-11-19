@@ -5,8 +5,12 @@ import android.os.Bundle;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.splashscreen.SplashScreen;
 
-// UI skeleton only. Loading checks, error states and the transition to
-// LoginActivity/DashboardActivity are added by the logic team.
+/**
+ * Splash screen of the UNEB e-Results app.
+ *
+ * <p>UI skeleton only. Loading checks, error states and the transition to
+ * LoginActivity/DashboardActivity are added by the logic team.
+ */
 public class SplashActivity extends AppCompatActivity {
 
     @Override
