@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<!DOCTYPE suppressions PUBLIC
+    "-//Checkstyle//DTD SuppressionFilter Configuration 1.2//EN"
+    "https://checkstyle.org/dtds/suppressions_1_2.dtd">
+
+<suppressions>
+    <!-- Generated Android code: not our problem -->
+    <suppress checks=".*"
+        files="[\\/](R|BuildConfig)\.java$|[\\/]generated[\\/]"/>
+    <!-- Tests can have magic numbers and skip Javadoc -->
+    <suppress checks="MagicNumber|MissingJavadocMethod|MissingJavadocType"
+        files="[\\/]src[\\/](test|androidTest)[\\/]"/>
+</suppressions>

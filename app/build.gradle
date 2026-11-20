@@ -1,5 +1,6 @@
 plugins {
     id 'com.android.application'
+    id 'checkstyle'
 }
 
 android {
@@ -24,6 +25,32 @@ android {
         sourceCompatibility JavaVersion.VERSION_11
         targetCompatibility JavaVersion.VERSION_11
     }
+}
+
+checkstyle {
+    toolVersion = '10.12.5'
+    configDirectory = rootProject.file('config/checkstyle')
+    ignoreFailures = false          // any error-severity violation fails the build
+    maxErrors = 0
+    maxWarnings = Integer.MAX_VALUE // warnings are reported but don't block
+}
+
+// Android modules have no Java sourceSets, so Checkstyle needs a task we define ourselves
+tasks.register('checkstyleAll', Checkstyle) {
+    group = 'verification'
+    description = 'Runs Checkstyle on all Java sources'
+    configFile = rootProject.file('config/checkstyle/checkstyle.xml')
+    source = fileTree(dir: 'src', include: '**/*.java')
+    classpath = files()
+    reports {
+        xml.required = true
+        html.required = true
+    }
+}
+
+// `./gradlew check` also runs Checkstyle
+tasks.named('check') {
+    dependsOn 'checkstyleAll'
 }
 
 dependencies {
