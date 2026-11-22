@@ -5,9 +5,7 @@
      animated-rotate is Animatable, so ProgressBar starts/stops it automatically. -->
 <animated-rotate xmlns:android="http://schemas.android.com/apk/res/android"
     android:pivotX="50%"
-    android:pivotY="50%"
-    android:framesCount="48"
-    android:duration="20">
+    android:pivotY="50%">
     <layer-list>
         <!-- Track: outer radius = half the bounds, 2.5dp-thick at 28dp -->
         <item>
